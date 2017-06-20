@@ -64,6 +64,8 @@ item1 = Items(name='Stick',
               "High quality composite, wood and goalie sticks.",
               category_id=9,
               user_id=1)
+session.add(item1)
+session.commit()
 
 item2 = Items(name='Goggles',
               date=datetime.datetime.now(),
@@ -71,6 +73,9 @@ item2 = Items(name='Goggles',
               "comes standard in our lineup of Happy Lens snow goggles.",
               category_id=5,
               user_id=1)
+session.add(item2)
+session.commit()
+
 
 item3 = Items(name='Snowboard',
               date=datetime.datetime.now(),
@@ -80,6 +85,8 @@ item3 = Items(name='Snowboard',
               "tuned for the best descents of your life.",
               category_id=5,
               user_id=1)
+session.add(item3)
+session.commit()
 
 item4 = Items(name='Two shinguards',
               date=datetime.datetime.now(),
@@ -87,13 +94,17 @@ item4 = Items(name='Two shinguards',
               "for legal play in nearly all soccer leagues.",
               category_id=1,
               user_id=1)
+session.add(item4)
+session.commit()
 
-item5 = Items(name='shinguards',
+item5 = Items(name='Shinguards',
               date=datetime.datetime.now(),
               description="Shin guards and socks are required "
               "for legal play in nearly all soccer leagues.",
               category_id=1,
               user_id=1)
+session.add(item5)
+session.commit()
 
 item6 = Items(name='Frisbee',
               date=datetime.datetime.now(),
@@ -101,4 +112,38 @@ item6 = Items(name='Frisbee',
               "decided that the Discraft UltraStar is the best "
               "recreational flying disc.",
               category_id=4,
-              userid=1)
+              user_id=1)
+session.add(item6)
+session.commit()
+
+item7 = Items(name='Bat',
+              date=datetime.datetime.now(),
+              description="A baseball bat is a smooth wooden or metal club "
+              "used in the sport of baseball to hit the ball after "
+              "it is thrown by the pitcher.",
+              category_id=3,
+              user_id=1)
+session.add(item7)
+session.commit()
+
+item8 = Items(name='Jersey',
+              date=datetime.datetime.now(),
+              description="We have it here! Get a matching jersey "
+              "to go along with your kids favorite team, "
+              "check out our entire collection of Soccer Jerseys.",
+              category_id=1,
+              user_id=1)
+session.add(item8)
+session.commit()
+
+item9 = Items(name='Soccer Cleats',
+              date=datetime.datetime.now(),
+              description="urf shoes have identical uppers to traditional "
+              "soccer boots, but the outsoles differ in "
+              "that they make up the cleat portion.",
+              category_id=1,
+              user_id=1)
+session.add(item9)
+session.commit()
+
+print "Filling database, done"
