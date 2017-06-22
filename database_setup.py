@@ -15,13 +15,13 @@ class User(Base):
     picture = Column(String(250))
 
 
-class Category(Base):
-    __tablename__ = 'category'
+class Catagory(Base):
+    __tablename__ = 'catagory'
 
     id = Column(Integer, primary_key=True)
     name = Column(String(80), nullable=False)
     user_id = Column(Integer, ForeignKey('user.id'))
-    user = relationship(User, backref="category")
+    user = relationship(User, backref="catagory")
 
     @property
     def serialize(self):
@@ -39,8 +39,8 @@ class Items(Base):
     name = Column(String(80), nullable=False)
     date = Column(DateTime, nullable=False)
     description = Column(String(250))
-    category_id = Column(Integer, ForeignKey('category.id'))
-    category = relationship(Category, backref=backref(
+    catagory_id = Column(Integer, ForeignKey('catagory.id'))
+    catagory = relationship(Catagory, backref=backref(
         'items', cascade='all, delete'))
     user_id = Column(Integer, ForeignKey('user.id'))
     user = relationship(User, backref='items')
@@ -52,9 +52,9 @@ class Items(Base):
             'id': self.id,
             'name': self.name,
             'description': self.description,
-            'category': self.category.name
+            'catagory': self.catagory.name
         }
 
 
-engine = create_engine('sqlite:///catelog.db')
-Base.metadata.create_all(engine)
+engine = create_engine('sqlite:///catalog.db')
+Base

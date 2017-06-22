@@ -10,7 +10,7 @@ Base.metadata.bind = engine
 DBSession = sessionmaker(bind=engine)
 session = DBSession()
 
-session.query(Category).delete()
+session.query(Catagory).delete()
 session.query(Items).delete()
 session.query(User).delete()
 
@@ -21,40 +21,40 @@ user1 = User(name="Vincent Wang",
 session.add(user1)
 session.commit()
 
-category1 = Category(name='Soccer', user_id=1)
-session.add(category1)
+catagory1 = Catagory(name='Soccer', user_id=1)
+session.add(catagory1)
 session.commit()
 
-category2 = Category(name='Basketball', user_id=1)
-session.add(category2)
+catagory2 = Catagory(name='Basketball', user_id=1)
+session.add(catagory2)
 session.commit()
 
-category3 = Category(name='Baseball', user_id=1)
-session.add(category3)
+catagory3 = Catagory(name='Baseball', user_id=1)
+session.add(catagory3)
 session.commit()
 
-category4 = Category(name='Frisbee', userid=1)
-session.add(category4)
+catagory4 = Catagory(name='Frisbee', userid=1)
+session.add(catagory4)
 session.commit()
 
-category5 = Category(name='Snowboarding', userid=1)
-session.add(category5)
+catagory5 = Catagory(name='Snowboarding', userid=1)
+session.add(catagory5)
 session.commit()
 
-category6 = Category(name='Rock Climbing', userid=1)
-session.add(category6)
+catagory6 = Catagory(name='Rock Climbing', userid=1)
+session.add(catagory6)
 session.commit()
 
-category7 = Category(name='Foosball', userid=1)
-session.add(category7)
+catagory7 = Catagory(name='Foosball', userid=1)
+session.add(catagory7)
 session.commit()
 
-category8 = Category(name='Skating', userid=1)
-session.add(category8)
+catagory8 = Catagory(name='Skating', userid=1)
+session.add(catagory8)
 session.commit()
 
-category9 = Category(name='Hockey', userid=1)
-session.add(category9)
+catagory9 = Catagory(name='Hockey', userid=1)
+session.add(catagory9)
 session.commit()
 
 item1 = Items(name='Stick',
@@ -62,7 +62,7 @@ item1 = Items(name='Stick',
               description="Our selection of hockey sticks "
               "will have you shooting better and scoring more. "
               "High quality composite, wood and goalie sticks.",
-              category_id=9,
+              catagory_id=9,
               user_id=1)
 session.add(item1)
 session.commit()
@@ -71,7 +71,7 @@ item2 = Items(name='Goggles',
               date=datetime.datetime.now(),
               description="Superior color and contrast enhancement "
               "comes standard in our lineup of Happy Lens snow goggles.",
-              category_id=5,
+              catagory_id=5,
               user_id=1)
 session.add(item2)
 session.commit()
@@ -83,7 +83,7 @@ item3 = Items(name='Snowboard',
               "the K2 Ultra Splitboard. "
               "This burly, stiff deck has a directional shape "
               "tuned for the best descents of your life.",
-              category_id=5,
+              catagory_id=5,
               user_id=1)
 session.add(item3)
 session.commit()
@@ -92,7 +92,7 @@ item4 = Items(name='Two shinguards',
               date=datetime.datetime.now(),
               description=" Shin guards and socks are required "
               "for legal play in nearly all soccer leagues.",
-              category_id=1,
+              catagory_id=1,
               user_id=1)
 session.add(item4)
 session.commit()
@@ -101,7 +101,7 @@ item5 = Items(name='Shinguards',
               date=datetime.datetime.now(),
               description="Shin guards and socks are required "
               "for legal play in nearly all soccer leagues.",
-              category_id=1,
+              catagory_id=1,
               user_id=1)
 session.add(item5)
 session.commit()
@@ -111,7 +111,7 @@ item6 = Items(name='Frisbee',
               description="We spent 30 hours testing flying discs and "
               "decided that the Discraft UltraStar is the best "
               "recreational flying disc.",
-              category_id=4,
+              catagory_id=4,
               user_id=1)
 session.add(item6)
 session.commit()
@@ -121,7 +121,7 @@ item7 = Items(name='Bat',
               description="A baseball bat is a smooth wooden or metal club "
               "used in the sport of baseball to hit the ball after "
               "it is thrown by the pitcher.",
-              category_id=3,
+              catagory_id=3,
               user_id=1)
 session.add(item7)
 session.commit()
@@ -131,7 +131,7 @@ item8 = Items(name='Jersey',
               description="We have it here! Get a matching jersey "
               "to go along with your kids favorite team, "
               "check out our entire collection of Soccer Jerseys.",
-              category_id=1,
+              catagory_id=1,
               user_id=1)
 session.add(item8)
 session.commit()
@@ -141,9 +141,8 @@ item9 = Items(name='Soccer Cleats',
               description="urf shoes have identical uppers to traditional "
               "soccer boots, but the outsoles differ in "
               "that they make up the cleat portion.",
-              category_id=1,
+              catagory_id=1,
               user_id=1)
 session.add(item9)
-session.commit()
 
-print "Filling database, done"
+print "Data base dummy data injected"
